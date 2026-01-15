@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신문사설 검색 - Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="search-body">
+    <div class="brand-logo">정유진</div>
+    <div class="app-container">
+        <header>
+            <h2>신문사설 데이터베이스</h2>
+            <a href="index.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">&larr; 홈으로
+                돌아가기</a>
+        </header>
+        <main>
+            <div class="search-controls">
+                <select id="search-type">
+                    <option value="all">텍스트 전체에 있는 단어로 검색하기</option>
+                    <option value="author">작성자로 검색하기</option>
+                    <option value="structure">신문사설의 구조 (전체)</option>
+                    <option value="background">배경에 포함되어 있는 단어로 검색하기</option>
+                    <option value="evidence">애비던스에 들어있는 키워드로 검색하기</option>
+                    <option value="fact">팩트에 들어있는 키워드 검색하기</option>
+                </select>
+                <input type="text" id="search-input" placeholder="검색어를 입력하세요... (Enter를 누르세요)">
+                <button id="search-btn">검색</button>
+            </div>
+            <div id="loading" style="display: none; text-align: center; color: var(--text-muted);">데이터를 불러오는 중...</div>
+            <div id="results-count" style="margin-bottom: 1rem; color: var(--primary-color);"></div>
+            <div id="results-container" class="results-grid">
+                <!-- Results will be injected here -->
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
